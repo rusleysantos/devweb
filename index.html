@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v4.1.1">
+  <title>Trabalho 1 – Desenvolvimento de Sistema WEB</title>
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="form-validation.css" rel="stylesheet">
+
+  <script src="jquery-3.5.1.js"></script>
+
+</head>
+
+<body class="bg-light">
+  <div class="container">
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="ucl.png" alt="" width="200" height="72">
+      <h2>SCCS - Sistema de Cadastro Centralizado Sinistro</h2>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo nulla neque, vel elementum
+        turpis scelerisque dictum. Vivamus id dignissim augue.</p>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-12 order-md-1">
+        <form class="needs-validation" novalidate>
+          <div id="app">
+            <h4>Olá Seja Bem-Vindo {{ nome }} {{ sobre }}</h4>
+            <div class="row" >
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Nome</label>
+                <input v-model="nome" type="text" class="form-control" id="firstName" placeholder="" value=""
+                  required>
+                <div class="invalid-feedback">
+                  O primeiro nome válido é obrigatório.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Sobrenome</label>
+                <input type="text" v-model="sobre" class="form-control" id="lastName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  É necessário um sobrenome válido.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="address">Email</label>
+            <input type="text" class="form-control" id="email" placeholder="" required>
+            <div class="invalid-feedback">
+              Insira um endereço de e-mail válido para atualizações de envio.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="address">Senha</label>
+            <input type="password" class="form-control" id="address" placeholder="" required>
+            <div class="invalid-feedback">
+              É necessário inserir sua senha
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+    <hr>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <div class="mb-3">
+          <label for="address">CPF</label>
+          <input type="text" class="form-control" id="address" placeholder="">
+        </div>
+
+      </div>
+      <div class="col-md-6 mb-3">
+
+        <div class="mb-3">
+          <label for="address">RG</label>
+          <input type="text" class="form-control" id="address" placeholder="">
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="address">Estado Civil</label>
+      <select name="sexo" id="sexo" class="form-control">
+        <option value=""></option>
+        <option value="1">Solteiro</option>
+        <option value="2">Casado</option>
+        <option value="3">Divorciado</option>
+        <option value="4">Viúvo</option>
+        <option value="5">Separado</option>
+
+      </select>
+      
+    </div>
+
+    <div class="mb-3">
+      <label for="address">Sexo</label>
+      <select name="sexo" id="sexo" class="form-control">
+        <option value=""></option>
+        <option value="m">Masculino</option>
+        <option value="f">Feminino</option>
+      </select>
+      
+    </div>
+
+    <div class="mb-3">
+      <label for="address">Telefone</label>
+      <input type="tel" class="form-control" id="address" placeholder="">
+    </div>
+
+    <div class="mb-3">
+      <label for="address">Data de Nascimento</label>
+      <input type="date" class="form-control" id="address" placeholder="">
+    </div>
+
+
+    <div class="mb-3">
+      <label for="address">CEP</label>
+      <input type="text" class="form-control" id="address" placeholder="">
+    </div>
+
+
+    <div class="mb-3">
+      <label for="address">Endereço</label>
+      <input type="text" class="form-control" id="address" placeholder="">
+    </div>
+
+
+    <hr class="mb-4">
+    <button class="btn btn-primary btn-lg btn-block" type="submit">Cadastrar</button>
+    </form>
+  </div>
+  </div>
+
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2017-2059 Pomarellus </p>
+  </footer>
+  </div>
+
+  <script src="vue.js"></script>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        nome: '',
+        sobre:''
+      }
+    })
+
+  </script>
+
+
+
+  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="form-validation.js"></script>
+</body>
+
+</html>
