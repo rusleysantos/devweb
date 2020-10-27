@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Basico</title>
+</head>
+<body>
+    <% if (locals.erroMsg) { %>
+        <p><%= erroMsg %></p>
+    <% } %> 
+    <form id="formDados" action="/clientes" method="POST" >
+        <label for="codigo">Código</label>
+        <input name="codigo" id="codigo" type="text" value="<%= cliente.codigo %>" >
+        <br>
+        <label for="nome">Nome</label>
+        <input name="nome" id="nome" type="text" value="<%= cliente.nome %>">
+        <br>
+    </form>
+    <!-- <button type="submit" formmethod="GET" formaction="/clientes" form="formDados">Novo</button> -->
+    <!-- <a href="/clientes">Novo</a> -->
+    <button onclick="window.location.href='/clientes';">Novo</button>
+    <button type="submit" form="formDados" >Salvar</button>
+    <% if (cliente.codigo > 0) { %>
+        <button type="submit" formmethod="POST" formaction="/clientes/del/<%= cliente.codigo %>" form="formDados">Excluir</button>
+    <% } %> 
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+        </tr>
+        <% for( let i = 0; i < lista.length; i++ ) { %>
+            <tr>
+                <td><%= lista[i].codigo %></td>
+                <td><%= lista[i].nome %></td>
+                <td><a href="/clientes/<%= lista[i].codigo %>">Editar</a></td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>
